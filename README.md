@@ -13,7 +13,13 @@ itself will run once daily.
 ![](.README_images/basic-design.png)
 
 # Technical Description
+In a companion repository, I created a facility for monitoring collections for Raspberry Pis.  The code is [here](https://github.com/gamename/raspberry-pi-iot-monitor). 
+The facility is responsible for monitoring my farm of Raspberry Pis and notifying me if something goes wrong. But, the 
+question quickly comes up: Who monitors the monitor?  If the monitor machine (called the "broker" in my design) dies,
+how would I know?  That's what this function does.
 
+The function reads the IoT logs and looks for either errors (MSG003) or no problems found messages (MSG004). If it cannot
+find any messages, then I will get a SMS message of my cell phone.
 
 # Messages 
 There are basically two messages sent from the broker.  One has a prefix of "MSG003" and the other has a prefix of 
