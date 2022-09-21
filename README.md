@@ -116,4 +116,4 @@ SNS Permissions
 
 # Installation
 The good news about this lambda is that it is so small you can simply copy/paste into the AWS console.  Once you do that,
-you only have to set the SNS_ARN evironment variable and you're done.
+you only have to set the SNS_ARN environment variable, and you're done.
